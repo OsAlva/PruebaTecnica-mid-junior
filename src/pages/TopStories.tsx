@@ -15,11 +15,11 @@ export default function TopStories() {
 
     return (
         <>
-          <ul>
-            {isLoading && <li>Loading...</li>}
+          <ul style={{listStyle: 'none'}}>
+            {/* {isLoading && <li>Loading...</li>} */}
             {error && <li>Error</li>}
             {data?.map((id: number, index: number) => (
-                <li key={id}>
+                <li  key={id}>
                     <Story id={id} index={index}/>
                 </li>
                 ))

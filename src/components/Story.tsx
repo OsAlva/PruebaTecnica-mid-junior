@@ -1,6 +1,8 @@
 import {Link } from 'wouter';
 import useSWR from 'swr'
 import { getItemInfo } from '../services/hacker-news';
+import {story, storyHeader, storyLink, storyFooter, domainLink} from './Story.css';
+import { StoryLoader } from './StoryLoader';
 
 
 export const Story = (props: {
@@ -10,8 +12,8 @@ export const Story = (props: {
 
     const {id, index} = props;
     const { data, isLoading } = useSWR(`/story/${id}`, () => getItemInfo(id));
-
-    if(isLoading) return <span>Loading...</span>
+    //aqui va storyLoader de react-content-loader
+    if(isLoading) return <StoryLoader/>
   
     const {by, kids, score, title, url} = data; 
     console.log(data);
@@ -27,22 +29,22 @@ export const Story = (props: {
 
 
     return (
-        <article className=''>
-            <header className=''>
-               <small>{index} .</small>
-               <a className='' href={url} target='_blank' rel='noopener noreferrer'>{title } </a>
-               <a className='' href={url} target='_blank' rel='noopener noreferrer'>({ domain })</a>
+        <article className={story}>
+            <header className={storyHeader}>
+               <small>{index+1} .</small>
+               <a className={domainLink} href={url} target='_blank' rel='noopener noreferrer'>{title } </a>
+               <a className={domainLink} href={url} target='_blank' rel='noopener noreferrer'>({ domain })</a>
             </header>
-            <footer className=''>
-                <span>{score} points  </span>
+            <footer className={storyFooter}>
+                <span className={storyLink}>{score} points  </span>
                 
-                <Link className='' href={`/article/${id}`}>
+                <Link className={storyLink} href={`/article/${id}`}>
                         by {by  }   
                 </Link>
-                <Link className='' href={`/article/${id}`}>
+                <Link className={storyLink} href={`/article/${id}`}>
                         6 hours ago  
                 </Link>
-                <Link className='' href={`/article/${id}`}>
+                <Link className={storyLink} href={`/article/${id}`}>
                         {kids?.length ?? 0  } comments  
                 </Link>
             </footer>
