@@ -14,7 +14,7 @@ export default function Detail(props: {
     return (
         <div className=''>
            {
-                isLoading ? <p>'Loading...'</p> : <ListOfComments ids={data?.kids}/>
+                isLoading ? <p>'Loading...'</p> : <ListOfComments ids={data?.kids.slice(0,10) ??  []}/>
            }
         </div>
     )

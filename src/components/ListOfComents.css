@@ -1,0 +1,19 @@
+summary{
+    border: 1px solid #ccc;
+    
+
+}
+
+
+details{
+    border: 1px solid #ccc;
+}
+
+details[open]{
+    background: rgb(175, 223, 255);
+}
+
+
+.divComment{
+    padding-right: 2vw;
+}
