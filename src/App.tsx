@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { Route } from "wouter";
 import './App.css'
 import { Header } from './components/Header'
+
 // import TopStories from "./pages/TopStories";
 // import Detail from "./pages/Detail";
 
@@ -15,11 +16,13 @@ function App() {
   return (
     <>
      <Header />
-
-    <Suspense fallback={null}> {/* envolvemos en un suspense los componentes para que no de error*/}
-      <Route path="/" component={TopStories} />
-      <Route path="/article/:id" component={Detail}/>
-     </Suspense>
+    
+    <main>
+      <Suspense fallback="Loading"> {/* envolvemos en un suspense los componentes para que no de error*/}
+        <Route path="/" component={TopStories} />
+        <Route path="/article/:id" component={Detail}/>
+      </Suspense>
+    </main>
     </>
     
   )

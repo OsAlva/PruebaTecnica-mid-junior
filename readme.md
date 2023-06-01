@@ -2,7 +2,7 @@
 -Use a Styled Components solution of your choice ✅
 -Show placeholder/skeleton for stories and comments while loading
 -Respect list item identation for comments
--Each page should have a unique URL(EX. Localhost:8080/article/12121). It should be a SPA but all URLs should be accesible by direct link.
+-Each page should have a unique URL(EX. Localhost:8080/article/12121). It should be a SPA but all URLs should be accesible by direct link. ✅
 
 
 ## Instructions: 
