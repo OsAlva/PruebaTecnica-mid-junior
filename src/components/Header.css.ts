@@ -10,7 +10,7 @@ export const header = style({
     borderBottom: '1px solid #ccc',
     display: 'flex',
     gap: '20px',
-    padding: '0 32px'
+    padding: '0 22px'
 });
 
 export const logo = style({
