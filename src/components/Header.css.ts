@@ -29,14 +29,6 @@ export const link = style({
 })
 
 
-// export const listUl = style({
-//     textDecoration: 'none',
-//     display: 'flex',
-//     gap: '20px',
-//     justifyContent: 'space-between',
-//     listStyle: 'none',
-// })
-
 
 export const headerOption = style({
     textDecoration: 'none',

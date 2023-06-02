@@ -13,7 +13,7 @@ You may use any additional librarries you deem necessary. ( remember respecting 
 
 Part 3: Implement an infinite scroll for top stories by using a "Load more" button. ✅
 
-Part 4: Ensure scroll to the bottom every time new stories are loaded.
+Part 4: Ensure scroll to the bottom every time new stories are loaded. ✅
 
 Part 5: Make API call to fetch comments to fail 75% of the times, and handle the error gracefully.
 

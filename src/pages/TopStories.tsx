@@ -10,7 +10,7 @@ import { Story } from '../components/Story';
 export default function TopStories() {
    // const { data, error, isLoading } = useSWR('stories', () =>  getTopStories(1,10));
    // 
-   const {data, isLoading, size, setSize} = useSWRInfinite(
+   const {data, size, setSize} = useSWRInfinite(
     (index) => `stories/${index+1}`, //key que se usa para cachear los resultados
     (key) => {
         const [, page] = key.split('/');

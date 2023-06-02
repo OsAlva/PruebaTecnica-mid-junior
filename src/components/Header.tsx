@@ -1,4 +1,4 @@
-import {header, link, listUl, headerOption, headerContainer, logo} from './Header.css';
+import {header, link, headerContainer, logo} from './Header.css';
 
 export const Header = () => {
 
