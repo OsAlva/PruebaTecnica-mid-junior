@@ -11,12 +11,12 @@ export const Story = (props: {
 }) => {
 
     const {id, index} = props;
-    const { data, isLoading } = useSWR(`/story/${id}`, () => getItemInfo(id));
+    const { data, isLoading } = useSWR(`/story/${id}`, () => getItemInfo(id))
     //aqui va storyLoader de react-content-loader
     if(isLoading) return <StoryLoader/>
   
     const {by, kids, score, title, url} = data; 
-    console.log(data);
+    console.log("print data:", data);
 
     let domain= '';
     try{

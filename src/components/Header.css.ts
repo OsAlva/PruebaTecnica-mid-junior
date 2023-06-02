@@ -14,25 +14,28 @@ export const header = style({
 });
 
 export const logo = style({
-    maxWidth: '30px',
+    maxWidth: '37px',
 })
 
 export const link = style({
     textDecoration: 'none',
     color: 'inherit',
-    fontSize: '1.2rem',
+    fontSize: '1.5rem',
     margin: '0',
-
-})
-
-
-export const listUl = style({
-    textDecoration: 'none',
     display: 'flex',
-    gap: '20px',
     justifyContent: 'space-between',
     listStyle: 'none',
+
 })
+
+
+// export const listUl = style({
+//     textDecoration: 'none',
+//     display: 'flex',
+//     gap: '20px',
+//     justifyContent: 'space-between',
+//     listStyle: 'none',
+// })
 
 
 export const headerOption = style({

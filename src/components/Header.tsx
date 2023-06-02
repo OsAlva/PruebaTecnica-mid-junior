@@ -7,7 +7,7 @@ export const Header = () => {
             <nav className={header}>
                 <img className={logo} src="../public/y.svg" alt="logo"/>
                 <a className={link} href="/"> Hacker News</a>
-                <ul className={listUl}>
+                {/* <ul className={listUl}>
                     <li><a className={headerOption} href="#">new</a></li>
                     <li><a className={headerOption} href="#">past</a></li>
                     <li><a className={headerOption} href="#">comments</a></li>
@@ -15,7 +15,7 @@ export const Header = () => {
                     <li><a className={headerOption} href="#">show</a></li>
                     <li><a className={headerOption} href="#">jobs</a></li>
                     <li><a className={headerOption} href="#">submit</a></li>
-                </ul>
+                </ul> */}
             </nav>
         </div>
     )
