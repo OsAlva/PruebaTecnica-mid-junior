@@ -45,7 +45,7 @@ export default function TopStories() {
                 
             }
           </ul>
-          <div style={{paddingLeft:'40px'}}>
+          <div style={{paddingLeft:'40px', paddingBottom: "20px"}}>
             <button onClick={() => {setSize(size + 1 )}}>Load more</button>
           </div>
         </>

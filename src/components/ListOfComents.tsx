@@ -2,6 +2,7 @@ import useSWR from "swr";
 import { getItemInfo } from "../services/hacker-news";
 import './ListOfComents.css'
 import { CommentLoader } from "./CommentLoader";
+import { getRelativeTime } from "../utils/getRelativeTime";
 
 export const Comment = (props: {
     id: number;
@@ -20,7 +21,7 @@ export const Comment = (props: {
                 <small>
                         <span>{by}</span>
                         <span>.</span>
-                        <span> {Math.floor(time / 3600)} hours ago</span>
+                        <span> {getRelativeTime(time)}</span>
                     </small>
                 </summary>
 

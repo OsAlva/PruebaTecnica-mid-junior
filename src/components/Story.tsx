@@ -3,6 +3,7 @@ import useSWR from 'swr'
 import { getItemInfo } from '../services/hacker-news';
 import {story, storyHeader, storyLink, storyFooter, domainLink} from './Story.css';
 import { StoryLoader } from './StoryLoader';
+import { getRelativeTime } from '../utils/getRelativeTime';
 
 
 export const Story = (props: {
@@ -15,7 +16,7 @@ export const Story = (props: {
     //aqui va storyLoader de react-content-loader
     if(isLoading) return <StoryLoader/>
   
-    const {by, kids, score, title, url} = data; 
+    const {by, kids, score, title, url, time} = data; 
     console.log("print data:", data);
 
     let domain= '';
@@ -26,7 +27,7 @@ export const Story = (props: {
     }
 
     //TODO: Create relative time function
-
+    const relativeTime = getRelativeTime(time);
 
     return (
         <article className={story}>
@@ -42,7 +43,7 @@ export const Story = (props: {
                         by {by  }   
                 </Link>
                 <Link className={storyLink} href={`/article/${id}`}>
-                        6 hours ago  
+                        {relativeTime} ago  
                 </Link>
                 <Link className={storyLink} href={`/article/${id}`}>
                         {kids?.length ?? 0  } comments  
